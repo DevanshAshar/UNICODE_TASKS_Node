@@ -9,11 +9,11 @@ async function dbConnect()
      let db=result.db(database);
      return db.collection('characters');
 }
-const main=async()=>{
+/*const main=async()=>{
      let data=await dbConnect();
      data=await data.find().toArray();
 }
-main();
+main();*/
 const app=express();
 app.get('/',async(req,resp)=>{
     let data=await dbConnect();
